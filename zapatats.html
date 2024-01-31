@@ -1,0 +1,107 @@
+
+<html>
+<head>
+	<title>Zapatats</title>
+	<style>
+		body {
+			background-color: aliceblue;
+		}
+	</style>
+	<script>
+		function agregarAlCarrito() {
+			alert("Producto agregado a tu culito");
+		}
+
+		function comprar() {
+			alert("Gracias por darme dinero");
+		}
+	</script>
+</head>
+<body>
+
+<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+  <head>
+	<script>
+		function cambiarEncabezado() {
+			document.getElementById("encabezado").innerHTML = "Desliza para ver nuestros productitos";
+		}
+	</script>
+</head>
+<body>
+	<h1 id="encabezado">Bienvenide a Zapatats</h1>
+	<div>
+	<button onclick="cambiarEncabezado()">.</button>
+	</div>
+</body>
+</div>
+	<p>¡Bienvenide a zapatats! Aquí encontrarás la mejor calidad de zapatos al mejor precio.</p>
+	<h2>Productos</h2>
+	<div id="catalogo">
+  <div class="zapato" onclick="mostrarDetalle(1)">
+   
+    <h3>Zapatos de Andres </h3>
+	<p>$5000.00</p>
+	<ul>
+		<li> <button onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
+	</ul>
+	<img src="https://th.bing.com/th/id/OIP.T7PFZnxymzgTZtnQEe1iqwHaFj?pid=ImgDet&rs=1" alt="Zapato 1">
+  </div>
+  <div class="zapato" onclick="mostrarDetalle(2)">
+    <h3>Zapatos Isabellaka</h3>
+    <p>$750.00</p>
+	<ul>
+		<li><button onclick="agregarAlCarrito()">Agregar a tu presi</button></li>
+	</ul>
+	<img src="https://outdooryak.com/wp-content/uploads/2019/04/worn-boots-300x300.jpg" alt="Zapato 2" width="340" height="360">
+  </div>
+  <div class="zapato" onclick="mostrarDetalle(3)">
+    <h3>Zapatos de Gael</h3>
+    <p>$0.50</p>
+	</div>
+	<div class="zapato" onclick="mostrarDetalle(1)">
+	<ul>
+		<li><button onclick="agregarAlCarrito()">Agregar a tu culito</button></li>
+	</ul>
+	<img src="https://27.media.tumblr.com/tumblr_lhk149QIBY1qzwp8so1_500.jpg" alt="Zapato 3">
+  </div>
+  <div class="zapato" onclick="mostrarDetalle(1)">
+   
+    <h3>Zapatos de Nacho </h3>
+	<p>$25.00</p>
+	<ul>
+		<li> <button onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
+	</ul>
+	<img src="https://th.bing.com/th/id/R.e039ea77c5e6eb4b99c22db3569c3eed?rik=u4Utchpt%2f4sBkw&riu=http%3a%2f%2fvozporvos.com.ar%2fwp-content%2fuploads%2f2018%2f07%2fzapatos-rotos-e1532522204185.jpg&ehk=TeZ7fufygwLlH4beJ1oWhkwu7dLjQhz9C%2fOzdoXwVWw%3d&risl=&pid=ImgRaw&r=0" alt="Zapato 1">
+  </div>
+</div>
+
+ <h3>Zapatos de Carlos Andres</h3>
+	<p>$25.00</p>
+	<ul>
+		<li> <button onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
+	</ul>
+	<img src="https://th.bing.com/th/id/OIP.50ZS7ue4rMm29E5FZr50RwAAAA?pid=ImgDet&rs=1" alt="Zapato 1">
+  </div>
+</div>
+
+<div id="detalle">
+  <img src="" alt="" id="detalle-imagen">
+  <h3 id="detalle-nombre"></h3>
+  <p id="detalle-precio"></p>
+  <p id="detalle-descripcion"></p>
+
+	<h2>Culito de compras</h2>
+    <div id="carrito">
+  <h3>Carrito de compras</h3>
+  <ul id="lista-carrito">
+    <!-- Elementos del carrito se agregan dinámicamente aquí -->
+  </ul>
+  <p>Total: $<span id="total-carrito">0.00</span></p>
+  <button id="vaciar-carrito">Vaciar carrito</button>
+</div>
+
+	<ul id="carrito">
+	</ul>
+	<button onclick="comprar()">Comprar</button>
+</body>
+</html>
