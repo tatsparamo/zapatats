@@ -4,8 +4,32 @@
 	<title>Zapatats</title>
 	<style>
 		body {
-			background-color: aliceblue;
+			background-color: rgb(128, 181, 228);
 		}
+	</style>
+	<style>
+		.boton-carrito {
+			background-color: #6e5096; 
+			border: none;
+			color: rgb(255, 253, 253);
+			padding: 8px 16px;
+			font-size: 14px;
+			cursor: pointer;
+			border-radius: 4px;
+		}
+	
+	</style>
+	<style>
+		.boton-compras {
+			background-color: #0f5c69; 
+			border: none;
+			color: rgb(255, 253, 253);
+			padding: 8px 16px;
+			font-size: 14px;
+			cursor: pointer;
+			border-radius: 4px;
+		}
+	
 	</style>
 	<script>
 		function agregarAlCarrito() {
@@ -23,53 +47,60 @@
   <head>
 	<script>
 		function cambiarEncabezado() {
-			document.getElementById("encabezado").innerHTML = "Desliza para ver nuestros productitos";
+			document.getElementById("encabezado").innerHTML = "Desliza para ver nuestros productitazos";
+			var colorActual = encabezado.style.color;
+            var nuevoColor = (colorActual === 'black') ? 'pink' : 'black'; // Cambia entre negro y azul
+
+            encabezado.style.color = nuevoColor;
 		}
 	</script>
 </head>
 <body>
 	<h1 id="encabezado">Bienvenide a Zapatats</h1>
 	<div>
-	<button onclick="cambiarEncabezado()">.</button>
+	<button onclick="cambiarEncabezado()">⮕</button>
 	</div>
 </body>
 </div>
 	<p>¡Bienvenide a zapatats! Aquí encontrarás la mejor calidad de zapatos al mejor precio.</p>
-	<h2>Productos</h2>
+	<h2>Nuestra merch</h2>
 	<div id="catalogo">
   <div class="zapato" onclick="mostrarDetalle(1)">
    
     <h3>Zapatos de Andres </h3>
+	<p>¡Perfectas para tu verano en la playa!</p>
 	<p>$5000.00</p>
 	<ul>
-		<li> <button onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
+		<li><button class="boton-carrito" onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
 	</ul>
 	<img src="https://th.bing.com/th/id/OIP.T7PFZnxymzgTZtnQEe1iqwHaFj?pid=ImgDet&rs=1" alt="Zapato 1">
   </div>
   <div class="zapato" onclick="mostrarDetalle(2)">
-    <h3>Zapatos Isabellaka</h3>
+    <h3>Zapatos para bellakear un viernes en la noche </h3>
+	<p>¡Llevatelos a la fira!</p>
     <p>$750.00</p>
 	<ul>
-		<li><button onclick="agregarAlCarrito()">Agregar a tu presi</button></li>
+		<li><button class="boton-carrito" onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
 	</ul>
 	<img src="https://outdooryak.com/wp-content/uploads/2019/04/worn-boots-300x300.jpg" alt="Zapato 2" width="340" height="360">
   </div>
   <div class="zapato" onclick="mostrarDetalle(3)">
-    <h3>Zapatos de Gael</h3>
+    <h3>house tour shoes</h3>
     <p>$0.50</p>
 	</div>
 	<div class="zapato" onclick="mostrarDetalle(1)">
 	<ul>
-		<li><button onclick="agregarAlCarrito()">Agregar a tu culito</button></li>
+		<li><button class="boton-carrito" onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
 	</ul>
 	<img src="https://27.media.tumblr.com/tumblr_lhk149QIBY1qzwp8so1_500.jpg" alt="Zapato 3">
   </div>
   <div class="zapato" onclick="mostrarDetalle(1)">
    
-    <h3>Zapatos de Nacho </h3>
+    <h3>Zapatos de domingo </h3>
+	<p>¡Las hermanas te esperan!</p>
 	<p>$25.00</p>
 	<ul>
-		<li> <button onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
+		<li><button class="boton-carrito" onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
 	</ul>
 	<img src="https://th.bing.com/th/id/R.e039ea77c5e6eb4b99c22db3569c3eed?rik=u4Utchpt%2f4sBkw&riu=http%3a%2f%2fvozporvos.com.ar%2fwp-content%2fuploads%2f2018%2f07%2fzapatos-rotos-e1532522204185.jpg&ehk=TeZ7fufygwLlH4beJ1oWhkwu7dLjQhz9C%2fOzdoXwVWw%3d&risl=&pid=ImgRaw&r=0" alt="Zapato 1">
   </div>
@@ -78,7 +109,7 @@
  <h3>Zapatos pa bretear</h3>
 	<p>$250.00</p>
 	<ul>
-		<li> <button onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
+		<li><button class="boton-carrito" onclick="agregarAlCarrito()">Agregar a tu carrito</button></li>
 	</ul>
 	<img src="https://i.pinimg.com/originals/bd/82/80/bd8280addd303c7c923abf7d6808b801.jpg" alt="Zapato 1">
   </div>
@@ -92,16 +123,8 @@
 
 	<h2>Culito de compras</h2>
     <div id="carrito">
-  <h3>Carrito de compras</h3>
-  <ul id="lista-carrito">
-    <!-- Elementos del carrito se agregan dinámicamente aquí -->
-  </ul>
-  <p>Total: $<span id="total-carrito">0.00</span></p>
-  <button id="vaciar-carrito">Vaciar carrito</button>
-</div>
-
 	<ul id="carrito">
 	</ul>
-	<button onclick="comprar()">Comprar</button>
+	<button class="boton-compras" onclick="comprar()">Comprar</button>
 </body>
 </html>
